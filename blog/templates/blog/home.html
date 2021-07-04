@@ -1,0 +1,44 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}
+105 Xchange Fm
+{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <div class="home-showcase">
+        <div class="showcase-back"></div>
+        <div class="showcase-overlay"></div>
+        <div class="showcase-content">
+            <h3>
+                <span class="fmcode animated jello infinite">105</span> Xchange <span class="fm">Fm</span>
+            </h3>
+            <br>
+            <div class="player-item">
+                <button id="back">
+                    <i class="fas fa-arrow-alt-circle-left"></i>
+                </button>
+                <button id="playpause">
+                    <i class="fas fa-play-circle"></i>
+                </button>
+                <button id="forward">
+                    <i class="fas fa-arrow-alt-circle-right"></i>
+                </button>
+                <audio src="" id="audioPlayer"></audio>
+                <div class="nowplaying"></div>
+            </div>
+            <div id="playlist">
+                {% for track in songs %}
+                    <a id="playthis" href="{{ track.song_list.url }}" title="{{ track.get_title }}">
+                        <h3>{{ track.get_title }}</h3>
+                        <audio  controlsList="nodownload" src="{{ track.song_list.url }}" id='myaudio'></audio>
+                    </a>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}
+105 Xchange Fm
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <br>
+  <br>
+  <br>
+  <br>
+  <h4 class="text-center">Enjoy your favorite playlists</h4>
+  <br>
+  <div class="playlists-container">
+    {% for playlist in playlists %}
+    <a href="{{ playlist.get_absolute_url }}" class="playlist-box z-depth-1-half">
+      <div class="playlist-poster">
+        <img src="{{ playlist.poster.url }}" alt="">
+      </div>
+      <div class="playlist-title">
+        <p class="text-center">
+          {{ playlist.playlist_title }} 
+          <span class="text-muted">
+            {{ playlist.views }} <i class="fas fa-eye"></i>
+          </span>
+        </p>
+      </div>
+    </a>
+    {% empty %}
+    <p>Playlist not available</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

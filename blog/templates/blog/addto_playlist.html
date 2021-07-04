@@ -1,0 +1,26 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}
+Add to your playlist
+{% endblock %}
+
+{% block content %}
+<div class="event-form-container">
+<br>
+  <br>
+  <br>
+  <br>
+    <div class="container">
+        <h3 class="text-center">Add songs to your  playlist</h3>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-control">
+                {{ form|crispy }}
+            </div>
+            <div class="form-control">
+                <button type="submit" style="padding: 10px;border-radius: 5px;">Add</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% load static %}
+<div class="nav-container">
+    <!--  nav items-->
+    <div class="navitems">
+        <!--    logo and name-->
+        <div class="logo-name">
+            <img src="{% static 'blog/images/1.png' %}" alt="">
+        </div>
+        
+        <!--      other items-->
+        <div class="other-menu">
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'podcasts' %}">Podcast</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

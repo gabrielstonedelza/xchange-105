@@ -1,0 +1,66 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}
+Playlists - '{{ deplaylist.playlist_title }}'
+{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-4 mr-auto detail-poster">
+            <img class="img-responsive z-depth-1-half" src="{{ deplaylist.poster.url}}" alt="">
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-8 ml-auto">
+            <div class="pdetail-container">
+                <h3 class="text-center">Playlist - {{ deplaylist.playlist_title }}</h3>
+                <br>
+
+                <div id="playlist">
+                    <!-- {% for track in song_lists %}
+                    <a  id="playthis" href="{{ track.song_list.url }}" title="{{ track.get_title }}">
+                        <span>{{ track.get_title }}</span>
+                        <audio controlsList="nodownload" src="{{ track.song_list.url }}" id='myaudio'></audio>
+                    </a>
+                    {% endfor %} -->
+                    <ul class="list-group">
+                        {% for track in song_lists %}
+                        <li class="list-group-item">
+                            <a id="playthis" href="{{ track.song_list.url }}" title="{{ track.get_title }}">
+                                <span style="color:black;font-style: italic;">{{forloop.counter }}</span> 
+                                <span style="color:black;font-weight: bold;">{{ track.get_title }}</span>
+                                <audio controlsList="nodownload" src="{{ track.song_list.url }}" id='myaudio'></audio>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+    <!-- <input type="range" class="progressBar"> -->
+    <div class="player-controls">
+        <div id="back">
+            <i class="fas fa-arrow-alt-circle-left"></i>
+        </div>
+        <audio src="" id="audioPlayer" controls controlsList="nodownload"></audio>
+        <div id="forward">
+            <i class="fas fa-arrow-alt-circle-right"></i>
+        </div>
+    </div>
+    <div class="nowplaying"></div>
+</footer>
+{% endblock %}

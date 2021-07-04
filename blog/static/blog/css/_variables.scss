@@ -1,0 +1,23 @@
+$bg-color: #d3d3;
+$seek-before-width: 0;
+$seek-before-color: #940a0a;
+$knobby: rgba(0, 0, 0, 0.8);
+$selected-knobby: rgb(255, 234, 253);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: monospace;
+}
+
+@mixin setFlex($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}

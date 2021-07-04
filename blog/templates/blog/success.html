@@ -1,0 +1,25 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}
+Success
+{% endblock %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-10 ml-auto mr-auto">
+      <h3 class="text-center">Playlist added successfully</h3>
+      <br>
+      <div class="happy-face">
+        <img src="{% static 'blog/images/11.png' %}" alt="">
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

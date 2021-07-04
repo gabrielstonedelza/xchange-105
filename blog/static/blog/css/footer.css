@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: monospace;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 1;
+}
+
+footer .nowplaying {
+  font-weight: bold;
+  color: white;
+  margin-right: 20px;
+}
+
+footer .player-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+}
+
+footer .player-controls #backwards,
+footer .player-controls #forwards {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+}
+
+footer .player-controls .fa-arrow-alt-circle-left,
+footer .player-controls .fa-arrow-alt-circle-right {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.progressBar {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #d3d3;
+  position: relative;
+  border-radius: 10px;
+  outline: none;
+  width: 100%;
+  height: 11px;
+}
+
+.progressBar::before {
+  content: "";
+  height: 11px;
+  width: 0;
+  background-color: #940a0a;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.progressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  position: relative;
+  margin: -2px 0 0 0;
+  z-index: 3;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.progressBar:active::-webkit-slider-thumb {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-color: #ffeafd;
+}
+
+.progressBar::-webkit-slider-runnable-track {
+  background: #d3d3;
+  position: relative;
+  border-radius: 10px;
+  outline: none;
+  width: 100%;
+  height: 11px;
+}
+
+.progressBar::-webkit-slider-runnable-track::before {
+  content: "";
+  height: 11px;
+  width: 0;
+  background-color: #940a0a;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.progressBar::-webkit-slider-runnable-track::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  position: relative;
+  margin: -2px 0 0 0;
+  z-index: 3;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.progressBar::-webkit-slider-runnable-track:active::-webkit-slider-thumb {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-color: #ffeafd;
+}
+
+.progressBar::-moz-range-track {
+  background: #d3d3;
+  position: relative;
+  border-radius: 10px;
+  outline: none;
+  width: 100%;
+  height: 11px;
+}
+
+.progressBar::-moz-range-track::-moz-focus-outer {
+  border: 0;
+}
+
+.progressBar::-moz-range-track::-moz-progress-bar {
+  background-color: #940a0a;
+  height: 11px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.progressBar::-moz-range-track::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: transparent;
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  box-sizing: border-box;
+}
+
+.progressBar::-moz-range-track:active::-moz-range-thumb {
+  transform: scale(1.2);
+  background-color: #ffeafd;
+}
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,159 @@
+.detail-poster img {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.playlists-container {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.playlists-container .playlist-box .playlist-poster img {
+  width: 300px;
+  height: 250px;
+}
+
+.playlists-container .playlist-box .playlist-title p {
+  padding: 10px;
+  font-weight: bold;
+  color: black;
+}
+
+.abcontainermain {
+  padding: 20px;
+  background-color: #1b2c44;
+  color: white;
+}
+
+.abcontainermain .aboutus1 h2 {
+  padding-bottom: 10px;
+}
+
+.abcontainermain .aboutus1 .section1 {
+  letter-spacing: -0.003em;
+  line-height: 32px;
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: solid 1px silver;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.384);
+}
+
+.abcontainermain h3 {
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.abcontainermain .section2,
+.abcontainermain .section3,
+.abcontainermain .section4,
+.abcontainermain .section5,
+.abcontainermain .section6,
+.abcontainermain .section7 {
+  letter-spacing: -0.003em;
+  line-height: 32px;
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.abcontainermain .section2 ul,
+.abcontainermain .section3 ul,
+.abcontainermain .section4 ul,
+.abcontainermain .section5 ul,
+.abcontainermain .section6 ul,
+.abcontainermain .section7 ul {
+  list-style-type: none;
+}
+
+.abcontainermain .missionvision {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.abcontainermain .missionvision .mission {
+  border: solid 1px silver;
+  padding: 10px;
+  border-radius: 10px;
+  letter-spacing: -0.003em;
+  line-height: 32px;
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.abcontainermain .missionvision .vision {
+  border: solid 1px silver;
+  padding: 10px;
+  border-radius: 10px;
+  letter-spacing: -0.003em;
+  line-height: 32px;
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.abcontainermain h3 {
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.abcontainermain .objectivesuccess {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.abcontainermain .objectivesuccess .section2,
+.abcontainermain .objectivesuccess .section3 {
+  border: solid 1px silver;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.abcontainermain .section4,
+.abcontainermain .section5, .abcontainermain .section6, .abcontainermain .section7 {
+  border: solid 1px silver;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.abshowcasecontainer {
+  width: 100%;
+  height: 70vh;
+}
+
+.abshowcasecontainer .abshowback {
+  width: 100%;
+  height: 70vh;
+  position: absolute;
+  background: url("../images/2.PNG");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.abshowcasecontainer .abshowoverlay {
+  width: 100%;
+  height: 70vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.466);
+  z-index: 2;
+}
+/*# sourceMappingURL=home.css.map */
