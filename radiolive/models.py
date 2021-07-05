@@ -8,7 +8,7 @@ from django.urls import reverse
 class Playlist(models.Model):
     playlist_title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, blank=True, default="")
-    poster = models.ImageField(upload_to='posters')
+    poster = models.ImageField(upload_to='posters', blank=True, default="1.png")
     views = models.IntegerField(default=0)
     date_created = models.DateTimeField(auto_now_add=True)
 

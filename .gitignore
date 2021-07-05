@@ -103,8 +103,8 @@ ENV/
 
 .DS_Store
 *.sqlite3
-media/group_logos
-media/profile_pics
+media/playlists
+media/posters
 *.pyc
 *.db
 *.pid
